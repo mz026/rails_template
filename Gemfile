@@ -16,6 +16,7 @@ gem 'spring',        group: :development
 gem 'unicorn'
 
 group :test, :development do
+  gem 'database_cleaner'
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
