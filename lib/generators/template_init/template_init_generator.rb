@@ -4,6 +4,7 @@ class TemplateInitGenerator < Rails::Generators::Base
   def rename_app
     gsub_file Rails.root.join('config/application.rb'), 'Template', new_name.camelcase
     gsub_file Rails.root.join('config/database.yml'), 'template', new_name.underscore
+    gsub_file Rails.root.join('config/deploy.rb'), 'template', new_name.underscore
     gsub_file Rails.root.join('config/initializers/session_store.rb'), 'template', new_name.underscore
   end
 
